@@ -14,7 +14,7 @@ export const ImageStyled = styled(Image)`
 `;
 
 export const DetailsContainer = styled(View)`
-  margin-horizontal: 12px;
+  margin: 15px;
 `;
 
 export const DetailsText = styled(Text)`
