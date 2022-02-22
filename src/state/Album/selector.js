@@ -1,5 +1,10 @@
 export const getAlbumState = state => state.album;
-export const getAlbums = state => getAlbumState(state).albums;
+export const getAlbums = state => {
+  if (Object.keys(getAlbumState(state).albums).length === 0) {
+    return [];
+  }
+  return getAlbumState(state).albums;
+};
 
 export const getAlbumById = (state, albumId) => {
   if (getAlbums(state).length > 0) {
